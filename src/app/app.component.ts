@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
       <h2 *ngFor = "let x of heroList">
         {{x}}
       </h2>
+
+      <app-input [lovely]="lovelyMessage"> </app-input>
     
   </div>
   `
@@ -18,9 +20,11 @@ import { Component } from '@angular/core';
 // Get user input and add it into the heroes array;
 
 export class AppComponent {
+  lovelyMessage = "You are beatiful"
   title = 'Fallen Heroes';
   heroList = ['Bruce Wayne', ' Jimmy Carter ', ' Jimmy Nuetron '];
   myHero = this.heroList[0];
+
 }
 
 
