@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
     <input #input placeholder="Forgotten Soliders" (keyup.enter)="onEnter(input.value)">
     `
 })
+
 export class InputComponent  {
   values = '';
   onEnter(values: any){
