@@ -11,8 +11,7 @@ import { Component } from '@angular/core';
         {{x}}
       </h2>
 
-      <app-input [lovely]="lovelyMessage"> </app-input>
-    
+      <app-input [lovely]="lovelyMessage" (newName) = 'addToArray($event)'> </app-input>
   </div>
   `
 })
@@ -24,6 +23,10 @@ export class AppComponent {
   title = 'Fallen Heroes';
   heroList = ['Bruce Wayne', ' Jimmy Carter ', ' Jimmy Nuetron '];
   myHero = this.heroList[0];
+
+  addToArray(name){
+    this.heroList.push(name);
+  }
 
 }
 
